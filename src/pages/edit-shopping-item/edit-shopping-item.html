@@ -1,0 +1,33 @@
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>{{item?.name}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-item>
+    <ion-label>Name</ion-label>
+    <ion-input [(ngModel)]="item.name" placeholder="Ipad Pro"></ion-input>
+  </ion-item>
+
+  <ion-item>
+      <ion-label>Picture URL</ion-label>
+      <ion-input [(ngModel)]="item.urlPicture" placeholder="https://www.xxx.com"></ion-input>
+    </ion-item>
+
+    <ion-item>
+        <ion-label>Quantity</ion-label>
+        <ion-input type="number" [(ngModel)]="item.quantity" placeholder="1"></ion-input>
+      </ion-item>
+
+      <ion-item>
+          <ion-label>Price</ion-label>
+          <ion-input type="number" [(ngModel)]="item.price" placeholder="500"></ion-input>
+        </ion-item>
+
+         <button ion-button block clear (click)="saveItem(item)">Save</button>
+         <button ion-button block clear color="danger" (click)="removeItem(item)">Delete</button>
+</ion-content>
